@@ -1,5 +1,5 @@
 def merge_sort(arr):
-    """Рекурсивне сортування злиттям."""
+    
     if len(arr) <= 1:
         return arr
 
@@ -11,12 +11,12 @@ def merge_sort(arr):
 
 
 def merge(left, right):
-    """Зливає два відсортовані списки в один."""
+    
     merged = []
     left_index = 0
     right_index = 0
 
-    # Спочатку об'єднуємо менші елементи
+    
     while left_index < len(left) and right_index < len(right):
         if left[left_index] <= right[right_index]:
             merged.append(left[left_index])
@@ -25,7 +25,7 @@ def merge(left, right):
             merged.append(right[right_index])
             right_index += 1
 
-    # Додаємо залишки
+    
     while left_index < len(left):
         merged.append(left[left_index])
         left_index += 1
@@ -38,7 +38,7 @@ def merge(left, right):
 
 
 def merge_k_lists(lists):
-    """Об'єднує k відсортованих списків у один відсортований."""
+    
     combined = []
     for lst in lists:
         combined.extend(lst)
